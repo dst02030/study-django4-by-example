@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-k_9w*qe_fco8-+_5(ir4g433ny5hwdl8cpta6ya9f^0kfvcprp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['222.109.225.128']
-
+# ALLOWED_HOSTS = ['222.109.225.128', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '125.129.85.209']  
 
 # Application definition
 
@@ -122,3 +122,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 이메일 서버 구성
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'example@gmail.com'
+# EMAIL_HOST_PASSWORD = 'YourPassword' # gmail 비밀번호는 직접 입력 불가. 앱 비밀번호로 대체해 입력
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+# SMTP 서버를 사용할 수 없을 때
+# 아래 설정으로 이메일 전송 대신 쉘에 내용을 출력
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
