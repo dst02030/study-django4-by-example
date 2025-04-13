@@ -1,31 +1,33 @@
-# 1장
+# 1. manage.py
 
-## 프로젝트 생성
+## 1장
+
+### 프로젝트 생성
 django-admin startproject mysite
 
-## app 생성
+### app 생성
 python manage.py startapp blog
 
 
-## 서버 실행
+### 서버 실행
 python manage.py runserver 222.109.225.128:8000 --settings=mysite.settings
 
-## shell 열기
+### shell 열기
 python manage.py shell
 
-## superuser 생성
+### superuser 생성
 python manage.py createsuperuser
 
 
 
-## makemigrations
+### makemigrations
 python manage.py makemigrations blog
 
-## sqlmigrate
+### sqlmigrate
 python manage.py sqlmigrate {app명:-blog} {번호:-0001}
 
 
-## migrate
+### migrate
 python manage.py migrate
 
 
@@ -76,16 +78,4 @@ Post.published.filter(title__startswith = 'Who')
 
 ```
 
-# 2장
-
-## 이메일 송신 테스트
-```{python}
-from django.core.mail import send_mail
-send_mail('Django mail',
-            'This e-mail was sent with Django.',
-            'my_account@gmail.com',
-            ['your_account@gmail.com'],
-            fail_silently=False)
-```
-
-# 3장 블로그 애플리케이션 확장하기
+# 2. 
